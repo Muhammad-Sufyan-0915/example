@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        color: white;
+    }
+    footer{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background-color: maroon;
+    }
+    .main-content{
+        display: flex;
+    }
+    .main-content .box{
+        flex-basis: 50%;
+        padding: 10px 20px;
+    }
+    .box h2{
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .box .content{
+        margin: 20px 0 0 0;
+        position: relative;
+    }
+    /* .box .content:before{
+        position: absolute;
+        content: '';
+        margin-top: -10px;
+        height: 2px;
+        width: 100%;
+        background-color: #1a1a1a;
+    } */
+    .box .content:after{
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 15%;
+        top: -20px;
+        background-color: #f12020;
+    }
+    .left .content p{
+        text-align: justify;
+    }
+    .left .content .social{
+        margin: 20px 0 0 0;
+    }
+    .left .content .social a{
+        padding: 0 10px;
+    }
+    .left .content .social a span{
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        /* margin-left: -20px; */
+        margin-top: 20px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 40%;
+        transition: 0.3s;
+    }
+    
+    .left .content .social a span:hover{
+        background-color: red;
+    }
+    .center .content .fa{
+        font-size: 1.475rem;
+        background-color: rgba(0, 0, 0, 0.548);
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 50%;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .center .content .fa:hover{
+        background-color: gray;
+    }
+    .center .content .text{
+        font-size: 1.0625rem;
+        font-weight: 500;
+        padding-left: 10px;
+    }
+    .center .content .phone{
+        margin: 10px 0px;
+    }
+    .right form .text{
+        font-size: 1.0625rem;
+        margin-bottom: 2px;
+        color: white;
+    }
+    .right form .msg{
+        margin-top: 10px;
+    }
+    .right form input, .right form textarea{
+        width: 90%;
+        font-size: 1.0625rem;
+        background-color: white;
+        color: black;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid black;
+    }
+    .right form input:focus, .right form textarea:focus{
+        outline-color: #ff0000;
+    }
+    .right form .btn{
+        margin-top: 10px;
+    }
+    .right form .btn button{
+        height: 40px;
+        width: 90%;
+        border: none;
+        outline: none;
+        background-color: #f12020;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: .3s;
+        border-radius: 10px;
+    }
+    .right form .btn button:hover{
+        background-color: #000;
+    }
+    .bottom center{
+       padding: 10px; 
+       height: 50px;
+    
+       font-size: 0.9375rem;
+       background-color: #151515;
+    }
+    .bottom center a{
+        color: #f12020;
+        text-decoration: none;
+    }
+    .bottom center a:hover{
+        text-decoration: underline;
+    }
+    #fb{
+        background-color: blue;
+    }
+    #tw{
+        background-color:deepskyblue;
+    }
+    #in{
+        background-color: deeppink;
+    }
+    #yt{
+        background-color: red;
+    }
+    #fb:hover,#tw:hover,#in:hover,#yt:hover{
+        opacity: .6;
+    }
+    @media screen and (max-width:900px){
+        footer{
+            position:relative;
+            bottom: 0px;
+        }
+        .main-content{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .main-content .box{
+            margin: 10px 0;
+        }
+    }
+
+</style>
+<body>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About Us</h2>
+                <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, ducimus.</p>
+                <div class="social">
+                    <a href="#"><span id="fb" class="fa fa-facebook"></span></a>
+                    <a href="#"><span id="tw" class="fa fa-twitter"></span></a>
+                    <a href="#"><span id="in" class="fa fa-instagram"></span></a>
+                    <a href="#"><span id="yt" class="fa fa-youtube"></span></a>
+                </div>
+               </div>
+            </div>
+
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fa fa-map-marker"></span>
+                        <span class="text">Aptech Center</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fa fa-phone"></span>
+                        <span class="text">+92 333 1234567</span>
+                    </div>
+                    <div class="email">
+                        <span class="fa fa-envelope"></span>
+                        <span class="text">Sufi@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right box">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="message">
+                            <div class="text">Message *</div>
+                            <textarea cols="25" rows="3"></textarea>
+                        </div>
+                        <div class="btn">
+                        <button type="submit">Send</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By <a href="#">Muhammad Sufyan</a></span>
+                <span class="fa fa-copyright"><span>2022 | All Rights Reserved.</span></span>
+            </center>
+        </div>
+    </footer>
+</body>
+</html>
